@@ -1,14 +1,22 @@
 [
     {
-        "question" : "how to act like idiot1",
-        "reponse":[{"correct": true, "text": "be kind"},"be happy","be amazing","fff"]
+        "question" : "Quelle est la capitale de la Grèce ?",
+        "reponse":[{"correct": true, "text": "Athènes"},
+        {"correct": false, "text": "Rome"},{"correct": false, "text": "Madrid"},{"correct": false, "text": "Istanbul"}]
     },
     {
-        "question" : "how to act like idiot2",
-        "reponse":["be kind","be happy","be amazing","fff"]
+        "question" : "Quelle est la capitale de la Suède ?",
+        "reponse":[{"correct": false, "text": "Olso"},
+        {"correct": false, "text": "Helsinki"},{"correct": true, "text": "Stockholm"},{"correct": false, "text": "Copenhague"}]
     },
     {
-        "question" : "how to act like idiot3",
-        "reponse":["be kind","be happy","be amazing","fff"]
+        "question" : "Quelle est la capitale de la Roumanie ?",
+        "reponse":[{"correct": false, "text": "Sofia"},
+        {"correct": false, "text": "Varsovie"},{"correct": true, "text": "Bucarest"},{"correct": false, "text": "Zagreb"}]
+    },
+    {
+        "question" : "Quelle est la capitale du Vatican ?",
+        "reponse":[{"correct": false, "text": "Rome"},
+        {"correct": false, "text": "Milan"},{"correct": false, "text": "Venise"},{"correct": true, "text": "Cité du Vatican"}]
     }
 ]
