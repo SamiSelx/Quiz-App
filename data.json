@@ -1,0 +1,14 @@
+[
+    {
+        "question" : "how to act like idiot1",
+        "reponse":[{"correct": true, "text": "be kind"},"be happy","be amazing","fff"]
+    },
+    {
+        "question" : "how to act like idiot2",
+        "reponse":["be kind","be happy","be amazing","fff"]
+    },
+    {
+        "question" : "how to act like idiot3",
+        "reponse":["be kind","be happy","be amazing","fff"]
+    }
+]
