@@ -10,7 +10,7 @@ let nbQuestion = document.querySelector(".footer-box p span");
 
 let resultat = document.querySelector(".resultat");
 // document.querySelector(".resultat").style.display = "none";
-resultat.remove()
+resultat.remove();
 
 let numberQuestion = 0;
 let points = 0;
@@ -52,9 +52,17 @@ nextButton.onclick = () => {
     }
   } else if (numberQuestion + 1 === data.length) {
     document.querySelector(".quiz-box").style.display = "none";
-    document.body.appendChild(resultat)
-    
-    document.querySelector(".resultat p").innerHTML = `${points}/${data.length}`
+    document.body.appendChild(resultat);
+
+    document.querySelector(
+      ".resultat .totale-point"
+    ).innerHTML = `${points}/${data.length}`;
+    document.querySelector(".reset").onclick = reset;
+    if (points === 4) {
+      document.querySelector(".status").innerHTML = "YOU ARE GENIUS";
+    } else {
+      document.querySelector(".status").innerHTML = "Better Luck Next Time";
+    }
   } else {
     removeAllClasses();
     numberQuestion++;
@@ -90,4 +98,8 @@ function correctAnswer() {
   data[numberQuestion].reponse.forEach((rep, index) => {
     if (rep.correct) reponses[index].classList.add("success");
   });
+}
+
+function reset() {
+  window.location.reload();
 }
