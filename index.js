@@ -30,14 +30,6 @@ document.querySelector(".culture-btn").onclick = () => {
 let numberQuestion = 0;
 let points = 0;
 
-// window.onload = () => {
-//   question.innerHTML = data[0].question;
-//   reponses.forEach((reponse, index) => {
-//     reponse.innerHTML = data[0].reponse[index].text;
-//     reponse.setAttribute("value", index);
-//   });
-//   nbQuestion.innerHTML = `${numberQuestion + 1}/${data.length}`;
-// };
 
 reponses.forEach((reponse) => {
   reponse.onclick = () => {
