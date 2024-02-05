@@ -67,6 +67,7 @@ nextButton.onclick = () => {
     }
   } else if (numberQuestion + 1 === data.length) {
     document.querySelector(".quiz-box").style.display = "none";
+    resultat.style.display = "block";
     document.body.appendChild(resultat);
 
     document.querySelector(
@@ -74,13 +75,13 @@ nextButton.onclick = () => {
     ).innerHTML = `${points}/${data.length}`;
     document.querySelector(".reset").onclick = reset;
     document.querySelector(".try-again").onclick = tryAgain;
-    
+
     if (points === data.length) {
       document.querySelector(".status").innerHTML = "YOU ARE GENIUS";
-    } else if(points > data.length/2){
+    } else if (points > data.length / 2) {
       document.querySelector(".status").innerHTML = "YOU ARE CLOSE GL";
-    }else{
-      document.querySelector('.status').innerHTML = "Better Luck Next Time";
+    } else {
+      document.querySelector(".status").innerHTML = "Better Luck Next Time";
     }
   } else {
     removeAllClasses();
@@ -124,6 +125,7 @@ function reset() {
 }
 
 function initQuiz() {
+  quizBox.style.display = "block";
   document.body.appendChild(quizBox);
   question.innerHTML = data[0].question;
   reponses.forEach((reponse, index) => {
