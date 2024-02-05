@@ -19,7 +19,7 @@ quizBox.remove();
 document.querySelector(".it-btn").onclick = () => {
   data = [...itQuiz];
   document.querySelector(".box-quiz").remove();
-  initQuiz()
+  initQuiz();
 };
 document.querySelector(".culture-btn").onclick = () => {
   data = [...data2];
@@ -73,6 +73,7 @@ nextButton.onclick = () => {
       ".resultat .totale-point"
     ).innerHTML = `${points}/${data.length}`;
     document.querySelector(".reset").onclick = reset;
+    document.querySelector(".try-again").onclick = tryAgain;
     if (points === 4) {
       document.querySelector(".status").innerHTML = "YOU ARE GENIUS";
     } else {
@@ -127,4 +128,14 @@ function initQuiz() {
     reponse.setAttribute("value", index);
   });
   nbQuestion.innerHTML = `${numberQuestion + 1}/${data.length}`;
+}
+
+function tryAgain() {
+  quizBox.style.display = "grid";
+  quizBox.remove();
+  resultat.remove();
+  numberQuestion = 0;
+  points = 0;
+  removeAllClasses();
+  initQuiz();
 }
