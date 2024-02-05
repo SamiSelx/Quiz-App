@@ -1,0 +1,44 @@
+[
+    {
+        "question" : "How many bits make a byte?",
+        "reponse": [
+            {"correct": false, "text": "16 bits"},{"correct": true, "text": "8 bits"},{"correct": false, "text": "32 bits"},
+            {"correct": false, "text": "6 bits"}
+        ]
+    },
+    {
+        "question" : "The first search engine on the internet is",
+        "reponse": [
+            {"correct": true, "text": "Archie"},{"correct": false, "text": "Google"},{"correct": false, "text": "Bing"},
+            {"correct": false, "text": "Yahoo"}
+        ]
+    },
+    {
+        "question" : "The number of bits used by IPv6 address is",
+        "reponse": [
+            {"correct": false, "text": "16"},{"correct": false, "text": "32"},{"correct": false, "text": "64"},
+            {"correct": true, "text": "128"}
+        ]
+    },
+    {
+        "question" : "The first web browser invented in 1990 was",
+        "reponse": [
+            {"correct": true, "text": "WorldWideWeb"},{"correct": false, "text": "Internet Explorer"},{"correct": false, "text": "Nexus"},
+            {"correct": false, "text": "Mosaic"}
+        ]
+    },
+    {
+        "question" : "One of the advantages of information technology is",
+        "reponse": [
+            {"correct": true, "text": "Streamline communication"},{"correct": false, "text": "Easy to handle"},{"correct": false, "text": "None"},
+            {"correct": false, "text": "Both a and b"}
+        ]
+    },
+    {
+        "question" : "What is the full form of (CPU)?",
+        "reponse": [
+            {"correct": false, "text": "Crucial Processing Unit"},{"correct": false, "text": "Critical Processing Unit"},{"correct": false, "text": "Central Printing Unit"},
+            {"correct": true, "text": "Central Processing Unit"}
+        ]
+    }
+]

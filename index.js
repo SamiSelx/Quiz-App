@@ -1,5 +1,7 @@
-import data from "./data.json" assert { type: "json" };
+import data2 from "./data/data.json" assert { type: "json" };
+import itQuiz from "./data/itQuiz.json" assert { type: "json" };
 
+let data = [];
 let question = document.querySelector(".question");
 
 let reponses = document.querySelectorAll(".reponse-list li");
@@ -9,20 +11,33 @@ let nextButton = document.querySelector(".next-btn");
 let nbQuestion = document.querySelector(".footer-box p span");
 
 let resultat = document.querySelector(".resultat");
-// document.querySelector(".resultat").style.display = "none";
+
+let quizBox = document.querySelector(".quiz-box");
 resultat.remove();
+quizBox.remove();
+
+document.querySelector(".it-btn").onclick = () => {
+  data = [...itQuiz];
+  document.querySelector(".box-quiz").remove();
+  initQuiz()
+};
+document.querySelector(".culture-btn").onclick = () => {
+  data = [...data2];
+  document.querySelector(".box-quiz").remove();
+  initQuiz();
+};
 
 let numberQuestion = 0;
 let points = 0;
 
-window.onload = () => {
-  question.innerHTML = data[0].question;
-  reponses.forEach((reponse, index) => {
-    reponse.innerHTML = data[0].reponse[index].text;
-    reponse.setAttribute("value", index);
-  });
-  nbQuestion.innerHTML = `${numberQuestion + 1}/${data.length}`;
-};
+// window.onload = () => {
+//   question.innerHTML = data[0].question;
+//   reponses.forEach((reponse, index) => {
+//     reponse.innerHTML = data[0].reponse[index].text;
+//     reponse.setAttribute("value", index);
+//   });
+//   nbQuestion.innerHTML = `${numberQuestion + 1}/${data.length}`;
+// };
 
 reponses.forEach((reponse) => {
   reponse.onclick = () => {
@@ -102,4 +117,14 @@ function correctAnswer() {
 
 function reset() {
   window.location.reload();
+}
+
+function initQuiz() {
+  document.body.appendChild(quizBox);
+  question.innerHTML = data[0].question;
+  reponses.forEach((reponse, index) => {
+    reponse.innerHTML = data[0].reponse[index].text;
+    reponse.setAttribute("value", index);
+  });
+  nbQuestion.innerHTML = `${numberQuestion + 1}/${data.length}`;
 }
