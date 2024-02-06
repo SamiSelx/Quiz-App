@@ -74,10 +74,13 @@ nextButton.onclick = () => {
     ).innerHTML = `${points}/${data.length}`;
     document.querySelector(".reset").onclick = reset;
     document.querySelector(".try-again").onclick = tryAgain;
-    if (points === 4) {
+    
+    if (points === data.length) {
       document.querySelector(".status").innerHTML = "YOU ARE GENIUS";
-    } else {
-      document.querySelector(".status").innerHTML = "Better Luck Next Time";
+    } else if(points > data.length/2){
+      document.querySelector(".status").innerHTML = "YOU ARE CLOSE GL";
+    }else{
+      document.querySelector('.status').innerHTML = "Better Luck Next Time";
     }
   } else {
     removeAllClasses();
